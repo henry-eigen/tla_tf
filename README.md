@@ -9,7 +9,7 @@ This is an implementation of TLA from:
 
 The code for the loss itself is contained in utils/tla.py
 
-tla_example.ipynb shows how tla is used for adversarial training
+tla_example.ipynb shows how tla is used for adversarial training. All hyperparameters and attack details are taken from the paper. 
 
 ### Use details:
 
@@ -22,3 +22,4 @@ Things to be aware of:
 - The batch must be flattened before being passed to the loss
 - The dimensions of the tla labels must be (batch_size, 1)
 - If using Keras, a wrapper function to average the losses across the batch must be used to avoid shape issues
+- In the original paper, the authors added a regularization term to the loss citing Facenet. I have excluded this since I was unable to find the loss term in the referenced paper. This exclusion should have minimal impact on performance as the coefficient for the term was very small.
