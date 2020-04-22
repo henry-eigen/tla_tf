@@ -11,6 +11,6 @@ The loss is built so that the network has a single input. A batch of clean image
 The positive and anchor images are chosen from the clean and adversarial images respectively. The negative is chosen through a hard mining process where the nearest image of a diffent class is chosen.
 
 Things to be aware of:
-    * The batch must be flattened before being passed to the loss
-    * The dimensions of the tla labels must be (batch_size, 1)
-    * An external loss function must be used as a wrapper to average the losses across the batch
+- The batch must be flattened before being passed to the loss
+- The dimensions of the tla labels must be (batch_size, 1)
+- An external loss function must be used as a wrapper to average the losses across the batch
